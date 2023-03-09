@@ -1,0 +1,89 @@
+:root:root {
+    --adm-color-primary: #4CB4B5;
+    /* background-color: black; */
+    --adm-border-color: #4CB4B5;
+    --adm-color-text: #4CB4B5;
+
+}
+
+/* .accounts {
+    background-color: transparent!important;
+    color: white!important;
+} */
+
+.text {
+    color: #4CB4B5;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.midafi-header {
+    color: #4CB4B5;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.midafi-text {
+    color: #4CB4B5;
+    font-size: 0.5rem;
+}
+
+.staking-prompt {
+    color: #4CB4B5;
+    font-size: 1rem;
+}
+
+.staking-number {
+    color: #4CB4B5;
+    font-size: 14px;
+}
+
+.staking-footer {
+    font-size: 13px;
+}
+
+.adm-tabs-tab {
+    color: #4CB4B5;
+}
+
+.adm-tabs-tab-active {
+    font-weight: bold;
+}
+
+.adm-tabs-content {
+    padding: 0 !important;
+}
+
+.adm-tabs-tab-list {
+    border-bottom: none !important;
+    padding-bottom: 1rem;
+}
+
+.adm-tabs-tab-line {
+    height: 0 !important;
+}
+
+
+.round-header {
+    --border-radius: 20px !important;
+}
+
+#builder-coin-name {
+    color: green !important;
+}
+
+.builder-input {
+    /* color: red!important; */
+    border: 1px solid #4CB4B5;
+    border-radius: 3px;
+}
+
+.staking-input {
+    /* color: red!important; */
+    border: 1px solid #4CB4B5;
+    border-radius: 3px;
+}
+
+.modal-input {
+    background-color: black;
+}
