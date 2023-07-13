@@ -165,7 +165,7 @@ class Staking extends Component {
                 inputCentennialMidafiWithdraw: j.md.dividedBy(1e18).toString(10),
                 centennialSero: j.sd,
                 inputCentennialSeroWithdraw: j.sd.dividedBy(1e18).toString(10),
-                updateTime: j.updateTime,
+                updateTime: j.updateTime.toNumber(),
             });
         });
     }
@@ -394,7 +394,7 @@ class Staking extends Component {
                                                     <Button size='small'
                                                         onClick={() => {
                                                             this.closeWithdrawInterestModal();
-                                                            this.profit(new BigNumber(this.state.inputWithdrawInterest)).multipliedBy(1e18)
+                                                            this.profit(new BigNumber(this.state.inputWithdrawInterest).multipliedBy(1e18))
                                                         }}>
                                                         {this.state.lang.button.ok}
                                                     </Button>
@@ -441,7 +441,7 @@ class Staking extends Component {
                                                     <Button size='small'
                                                         onClick={() => {
                                                             this.closeReinvestModal();
-                                                            this.reinvest(new BigNumber(this.state.inputReinvest)).multipliedBy(1e18)
+                                                            this.reinvest(new BigNumber(this.state.inputReinvest).multipliedBy(1e18))
                                                         }}>
                                                         {this.state.lang.button.ok}
                                                     </Button>
@@ -664,19 +664,11 @@ class Staking extends Component {
                     <Grid.Item span={3}>
                         <span className="midafi-header">{this.state.lang.text.apy}</span>
                     </Grid.Item>
-                    <Grid.Item span={5}
-                    //  style={{
-                    //     display: 'flex',
-                    // justifyItems: 'center',
-                    // justifyContent: 'end',
-                    //     paddingRight: '0.5rem',
-                    // }}
-                    >
+                    <Grid.Item span={5}>
                         <span className="staking-number">
                             {apy} %
                         </span>
                     </Grid.Item>
-                    {/* <Grid.Item span={2}></Grid.Item> */}
                     <Grid.Item span={4} style={{ display: 'flex', justifyContent: 'end' }}>
                         {
                             sameDay(Math.ceil(new Date().getTime() / 1000), this.state.updateTime) ?

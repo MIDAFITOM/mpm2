@@ -250,6 +250,10 @@ class Dao extends Component {
             console.log("votes is 0");
             return;
         }
+        if (!isValidPkr(this.state.inputElected)) {
+            console.log("not valid address");
+            return;
+        }
         vote.vote(this.state.account.PK, this.state.account.MainPKr, this.state.inputElected, new BigNumber(this.state.inputVotes).multipliedBy(1e18));
     }
 
@@ -764,6 +768,14 @@ class Dao extends Component {
             </div>
         )
     }
+}
+
+function isValidPkr(pkr) {
+    if (pkr.length < 131 || pkr.length > 132) {
+        return false;
+    }
+    var patten = /^[0-9a-zA-Z]+$/;
+    return patten.test(pkr);
 }
 
 export default Dao;
